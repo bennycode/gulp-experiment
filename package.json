@@ -1,24 +1,17 @@
 {
-  "name": "gulp-experiment",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bennyn/gulp-experiment.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/bennyn/gulp-experiment/issues"
-  },
-  "homepage": "https://github.com/bennyn/gulp-experiment#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-load-plugins": "^1.2.2",
     "gulp-util": "^3.0.7"
-  }
+  },
+  "name": "gulp-experiment",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bennyn/gulp-experiment.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
 }
