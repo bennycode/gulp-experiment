@@ -1,6 +1,6 @@
 var gulp = require('gulp');
-var gutil = require('gulp-util');
+var plugins = require('gulp-load-plugins')();
 
 gulp.task('default', function () {
-  gutil.log(gutil.colors.magenta('Hello'), 'World!');
+  plugins.util.log(plugins.util.colors.magenta('Hello'), 'World!');
 });

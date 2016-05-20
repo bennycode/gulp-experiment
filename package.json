@@ -18,6 +18,7 @@
   "homepage": "https://github.com/bennyn/gulp-experiment#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.2.2",
     "gulp-util": "^3.0.7"
   }
 }
