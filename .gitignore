@@ -2,3 +2,4 @@
 .idea/**/*.xml
 !.idea/codeStyleSettings.xml
 /node_modules/
+/dest/
