@@ -10,7 +10,7 @@ gulp.task('default', function () {
     gulp.src(file.path)
       .pipe(plugins.typescript({
         noImplicitAny: true,
-        out: pathObject.name + '.js'
+        outFile: pathObject.name + '.js'
       }))
       .pipe(gulp.dest('dest/scripts'));
 
