@@ -4,16 +4,9 @@ var plugins = require('gulp-load-plugins')();
 
 gulp.task('default', function () {
   gulp.watch('src/**/*.ts').on('change', function (file) {
-
-    var pathObject = path.parse(file.path);
-
     gulp.src(file.path)
-      .pipe(plugins.typescript({
-        noImplicitAny: true,
-        outFile: pathObject.name + '.js'
-      }))
+      .pipe(plugins.typescript({noImplicitAny: true}))
       .pipe(gulp.dest('dest/scripts'));
-
   });
 });
 
