@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "rootDir": "src"
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

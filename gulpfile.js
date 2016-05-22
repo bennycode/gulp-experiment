@@ -18,10 +18,9 @@ gulp.task('default', function () {
 });
 
 gulp.task('ts', function () {
-  return gulp.src('src/**/*.ts')
-    .pipe(plugins.typescript({
-      noImplicitAny: true,
-      out: 'output.js'
-    }))
+  // http://www.typescriptlang.org/docs/handbook/tsconfig-json.html
+  var tsProject = plugins.typescript.createProject('tsconfig.json');
+  return tsProject.src()
+    .pipe(plugins.typescript(tsProject))
     .pipe(gulp.dest('dest/scripts'));
 });
