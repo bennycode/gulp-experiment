@@ -5,6 +5,7 @@ var plugins = require('gulp-load-plugins')({pattern: '*'});
 
 var tsProject = plugins.typescript.createProject('tsconfig.json');
 var browserSync = plugins.browserSync.create();
+var TestRunner = plugins.karma.Server;
 
 var actions = {
   compileTypeScript: function (inputStream) {
@@ -46,4 +47,11 @@ gulp.task('default', ['init'], function () {
 gulp.task('init', function () {
   plugins.util.log('Pre-compiling files...');
   return actions.compileTypeScript(gulp.src(paths.input + '/**/*.ts')).pipe(gulp.dest(paths.output));
+});
+
+gulp.task('test', ['init'], function (done) {
+  new TestRunner({
+    configFile: __dirname + '/karma.conf.js',
+    singleRun: true
+  }, done).start();
 });
