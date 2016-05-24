@@ -12,8 +12,7 @@ var actions = {
       .pipe(plugins.sourcemaps.init())
       .pipe(plugins.typescript(tsProject))
       .pipe(plugins.uglify())
-      .pipe(plugins.sourcemaps.write('.', {includeContent: false, sourceRoot: '/' + paths.input}))
-      .pipe(gulp.dest(paths.output));
+      .pipe(plugins.sourcemaps.write('.', {includeContent: false, sourceRoot: '/' + paths.input}));
   },
   startServer: function () {
     browserSync.init({
@@ -24,13 +23,15 @@ var actions = {
   }
 };
 
-gulp.task('default', function () {
+gulp.task('default', ['init'], function () {
   actions.startServer();
   gulp.watch(paths.input + '/**/*.ts').on('change', function (file) {
     var pathObject = path.parse(file.path);
     plugins.util.log('Compiling', '\'' + plugins.util.colors.yellow(pathObject.base) + '\'...');
 
-    var stream = gulp.src(file.path, {base: paths.input});
+    var stream = gulp.src(file.path, {base: paths.input})
+      .pipe(gulp.dest(paths.output));
+
     stream.on('end', function () {
       plugins.util.log('Compiled', '\'' + plugins.util.colors.yellow(pathObject.base) + '\'');
       browserSync.reload();
@@ -39,4 +40,11 @@ gulp.task('default', function () {
     actions.compileTypeScript(stream);
   });
   gulp.watch(paths.output + '/**/*.html').on('change', browserSync.reload);
+});
+
+gulp.task('init', function () {
+  plugins.util.log('Pre-compiling all files...');
+
+  return actions.compileTypeScript(gulp.src(paths.input + '/**/*.ts'))
+    .pipe(gulp.dest(paths.output));
 });
