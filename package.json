@@ -20,7 +20,8 @@
     "url": "git+https://github.com/bennyn/gulp-experiment.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "echo \"Starting development environment\" && gulp",
+    "test": "gulp test"
   },
   "version": "1.0.0"
 }
