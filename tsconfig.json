@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
     "noEmitOnError": true,
-    "noImplicitAny": true
+    "noImplicitAny": true,
+    "sortOutput": true
   },
   "exclude": [
     "node_modules"

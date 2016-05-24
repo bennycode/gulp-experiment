@@ -1,6 +1,8 @@
 function GetName(firstName:string, lastName:string) {
-    return firstName + " " + lastName;
+    console.log('2');
+    console.log('3');
+    console.log('4');
+    throw new Error("Source map test");
 }
 
-var name = GetName("Benny", "New");
-alert(name);
+GetName("Benny", "Neugebauer");
