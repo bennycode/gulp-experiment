@@ -20,7 +20,7 @@
     "url": "git+https://github.com/bennyn/gulp-experiment.git"
   },
   "scripts": {
-    "postinstall": "echo \"Starting tests...\" && gulp test"
+    "test": "echo \"Starting tests...\" && gulp test"
   },
   "version": "1.0.0"
 }
