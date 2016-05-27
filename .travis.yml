@@ -6,6 +6,11 @@ language: node_js
 node_js:
   - "node"
 
+# https://blog.travis-ci.com/2013-12-05-speed-up-your-builds-cache-your-dependencies
+cache:
+  directories:
+    - node_modules
+
 # http://docs.travis-ci.com/user/gui-and-headless-browsers
 before_install:
   - "export CHROME_BIN=chromium-browser"
