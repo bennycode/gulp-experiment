@@ -1,4 +1,3 @@
 # gulp-experiment
 
-- http://www.jsoneditoronline.org/
-- https://github.com/google/web-starter-kit
+[![Build Status](https://travis-ci.org/bennyn/gulp-experiment.svg?branch=master)](https://travis-ci.org/bennyn/gulp-experiment)
