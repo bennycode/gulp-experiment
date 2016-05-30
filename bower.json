@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "dexie": "git@github.com:dfahlander/Dexie.js#1.3.6"
+    "dexie": "git+https://github.com/dfahlander/Dexie.js#1.3.6"
   },
   "overrides": {
     "dexie": {
