@@ -2,14 +2,15 @@
 sudo: false 
 
 # http://docs.travis-ci.com/user/languages/javascript-with-nodejs/
-language: node_js
+language: "node_js"
 node_js:
   - "node"
 
 # https://blog.travis-ci.com/2013-12-05-speed-up-your-builds-cache-your-dependencies
 cache:
   directories:
-    - node_modules
+    - "bower_components"
+    - "node_modules"
 
 # http://docs.travis-ci.com/user/gui-and-headless-browsers
 before_install:
