@@ -2,6 +2,7 @@
   "devDependencies": {
     "browser-sync": "^2.12.8",
     "gulp": "^3.9.1",
+    "gulp-bower": "0.0.13",
     "gulp-load-plugins": "^1.2.2",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-typescript": "^2.13.4",
@@ -11,6 +12,7 @@
     "karma": "^0.13.22",
     "karma-chrome-launcher": "^1.0.1",
     "karma-jasmine": "^1.0.2",
+    "main-bower-files": "^2.13.1",
     "require-dir": "^0.3.0"
   },
   "name": "gulp-experiment",
@@ -20,6 +22,7 @@
     "url": "git+https://github.com/bennyn/gulp-experiment.git"
   },
   "scripts": {
+    "postinstall": "gulp bower",
     "test": "echo \"Starting tests...\" && gulp test"
   },
   "version": "1.0.0"
