@@ -10,7 +10,7 @@
     "gulp-util": "^3.0.7",
     "jasmine-core": "^2.4.1",
     "karma": "^0.13.22",
-    "karma-chrome-launcher": "^1.0.1",
+    "karma-chrome-launcher": "^2.0.0",
     "karma-jasmine": "^1.0.2",
     "main-bower-files": "^2.13.1",
     "require-dir": "^0.3.0"
